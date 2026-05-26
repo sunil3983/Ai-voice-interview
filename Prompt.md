@@ -183,13 +183,15 @@ In case of network failure : show retry prompt with cached state where possible
 Redirect to login with session - expired message in case Auth token expiry
 Show voice connection unavailable with option 
 
+Backend
+To ensure the platform remains stable, secure, and production-ready, the backend follows a centralized and structured error-handling architecture. Every asynchronous controller is wrapped inside a try/catch block, and any unexpected issue is forwarded to a global error-handling middleware using next(error). This approach prevents application crashes, keeps the codebase clean, and ensures that all errors are handled consistently across the entire system. 
+
 Documentation
-README documentation
-API documentation
-Environment variables setup guide 
-Deployment guide
-Contribution guidelines
-on the basis of this recommended architecture please give me complete response based on prompt with code and proper file structure
+README.md: project overview, feature list, architecture summary, setup instructions
+API_DOCS.md: all endpoints with method, path, request body, and response shape
+.env.example: all required variables listed below
+DEPLOYMENT.md: steps for Vercel (frontend) and Render/Railway (backend), including CI/CD notes
+
 
 
 Performance and Scalability
